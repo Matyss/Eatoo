@@ -7,6 +7,10 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import reducers from './reducers';
 
+//Components
+
+import EatsIndex from './components/EatsIndex';
+
 const createStoreWithMiddleware = composeWithDevTools(applyMiddleware())(
 	createStore
 );
@@ -21,7 +25,7 @@ ReactDOM.render(
 		<BrowserRouter>
 			<div>
 				<Switch>
-					<Route path="/" exact />
+					<Route path="/" exact component={EatsIndex} />
 					<Route component={NoMatch} />
 				</Switch>
 			</div>
